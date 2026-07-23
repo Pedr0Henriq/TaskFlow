@@ -7,8 +7,15 @@ export default function AuthenticatedLayout(): JSX.Element {
       <Stack.Screen
         name="index"
         options={{
-          title: 'My Tasks',
           headerShown: false,
+        }}
+      />
+
+      <Stack.Screen
+        name="tasks/create"
+        options={{
+          title: 'Create task',
+          presentation: 'modal',
         }}
       />
     </Stack>

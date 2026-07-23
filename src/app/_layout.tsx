@@ -6,13 +6,17 @@ import {
 } from '@/features/auth/context/AuthContext';
 
 import { LoadingScreen } from '@/shared/components/LoadingScreen';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { JSX } from 'react/jsx-runtime';
 
 export default function RootLayout(): JSX.Element {
   return (
+    <SafeAreaProvider>
+      
     <AuthProvider>
       <RootNavigator />
     </AuthProvider>
+    </SafeAreaProvider>
   );
 }
 
